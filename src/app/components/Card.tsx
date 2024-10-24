@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaLocationArrow } from "react-icons/fa";
 import Button from './button';
 
 interface CardProps {
@@ -17,7 +16,6 @@ function PricingCard({ pricing, pricingHeading, features }: CardProps) {
       <ul>
         {features.map((feature, index) => (
           <li key={index}>
-            <FaLocationArrow  />
             {feature}
           </li>
         ))}
