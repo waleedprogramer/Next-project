@@ -1,0 +1,52 @@
+
+.container{
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.text{
+  font-size: 3rem;
+  color:whitesmoke;
+  width: 40%;
+}
+
+
+.text h1 span{
+  font-size: 3.5rem;
+  font-weight: bold; 
+  color: transparent;                    
+  -webkit-text-stroke: 2px var(--main-color);                     
+ 
+}
+
+.Image {
+   height: 300px;
+   display: flex;
+   align-items: center;
+   margin-top: 40px;
+   margin-left: 40px;
+   width: 90%;
+}
+
+
+@media (max-width:768px) {
+  .container{
+    padding: var(--section-padding);
+    display: flex;
+    flex-direction: column;
+  }
+  .text{
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .text h1 span{
+    font-size: 2.5rem;                  
+   
+  }
+  .Image{
+    margin-left: unset;
+  }
+}

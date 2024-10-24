@@ -1,0 +1,24 @@
+.container{
+  display: flex;
+  padding: var(--section-padding);
+}
+
+@media (max-width:768px) {
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .image{
+    width: 350px;
+  }
+}
+
+@media (max-width:992px) {
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}

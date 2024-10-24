@@ -2,20 +2,359 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --main-color:hsl(16, 100%, 70%);
+  --section-padding : 50px ;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* NAVBAR */
+
+body{
+  background: #000;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid gray;
+}
+
+.navbar h1{
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+.navbar ul{
+  display: flex;
+  gap: 30px;
+  color: white;
+}
+
+
+@media (max-width:768px) {
+  .navbar{
+    flex-direction: column;
+    
+  }
+  .navbar h1{
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 10px;
+  }
+}
+/* HEADING STYLES */
+
+.subheading{
+  color: var(--main-color);
+  text-align: center;
+  font-weight: 5
+  00;
+
+}
+.heading{
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* CARD STYLING */
+
+.card{
+  padding:10px;
+  height: 565px;
+  width: 450px;
+}
+.card h3 span{
+  background: white;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.card h3{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card h2{
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 900; 
+  color: white;                   
+  margin-top: 10px;
+
+}
+.card h2 span{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+
+
+.card ul{
+  margin-top: 20px;
+  color: white;
+  
+}
+
+.card ul li{
+ display: flex;
+ gap: 5px;
+ font-size: 1rem;
+ padding: 15px;
+ align-items: center;
+ font-weight: 600;
+ font-size: 1.1rem;
+}
+
+@media (max-width:768px) {
+  .card{
+    width: 350px;
+  }
+  
+}
+
+@media (max-width:992px) {
+
+  }
+
+/* Subscription Button */
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--main-color);
+  color: white;
+  position: relative;
+  bottom: -10%;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  border: none;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.custom-button button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button:hover {
+  background-color: #fb7e01;
+}
+
+
+/* DETAILS */
+
+.detail{
+  margin-block: 40px;
+  background: hsl(0, 0%, 4%);
+  padding: 30px;
+  gap: 20px;
+  justify-content: space-around;
+  display: flex;
+}
+.detail h1{
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+}
+
+.detail span{
+  font-size: 1rem;
+  display: flex;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+/* SUBSCRIBE STYLES */
+
+/* Subscribe Section */
+.subscribe-section {
+  padding: var(--section-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+
+.subscribe-section h2 {
+  color: hsl(16, 100%, 70%);
+  font-weight: 700;
+  font-size:1.8rem;
+  margin-bottom: 1rem;
+}
+
+.subscribe-section p {
+  font-size: 1;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(240, 100%, 5%);
+  border-bottom: 2px solid var(--main-color);
+  
+}
+
+.error{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error h1{
+  font-size: 1.5rem;
+  
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 40px;
+  
+  
+}
+
+.subscribe-input {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #000;
+  border: 1px solid #ccc;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.subscribe-button {
+  background-color: hsl(16, 100%, 70%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: hsl(16, 100%, 60%);
+}
+
+.error-message {
+  color: hsl(0, 100%, 70%);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .subscribe-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe-input {
+    width: 100%;
+  }
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .form-group{
+   flex-direction: column;
+  }
+  
+}
+
+
+/* FOOTER STYLES */
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  gap: 1.5rem;
+}
+
+.footer-section {
+  margin: 1rem;
+}
+
+.footer-section h2 {
+  font-weight: 900;
+  color: hsl(16, 100%, 70%);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-section a:hover {
+  color: hsl(16, 100%, 70%);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 1rem;
+  }
+
+  .footer-section {
+    margin: 0.5rem;
+  }
+
+  .footer-section h2 {
+    font-size: 1.1rem;
+  }
 }

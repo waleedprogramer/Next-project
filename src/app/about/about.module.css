@@ -1,0 +1,36 @@
+.container{
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.content{
+  width: 60%;
+}
+
+.content h1{
+  font-weight: bold; 
+  color: transparent;                    
+  -webkit-text-stroke: 2px var(--main-color);
+  font-size: 3rem;
+  
+}
+
+.content p{
+  color: gray;
+  margin-top: 10px;
+}
+
+@media (max-width:768px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content{
+    width: 100%;
+  }
+}
